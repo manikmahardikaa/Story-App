@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.detail.DetailStoryActivity">
+
+    <ImageView
+        android:id="@+id/detailPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_welcome"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:transitionName="storyImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/detailEllipse"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/image_welcome"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailPhoto" />
+
+    <TextView
+        android:id="@+id/detailName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:text="Manik Mahardika"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/detailEllipse"
+        app:layout_constraintTop_toTopOf="@+id/detailEllipse" />
+
+    <TextView
+        android:id="@+id/tv_detail_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="Dibuat pada 2023-10-27"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/detailName"
+        app:layout_constraintStart_toEndOf="@+id/detailEllipse" />
+
+    <TextView
+        android:id="@+id/detailDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:text="Codelab ini menitikberatkan pada implementasi kelas service untuk melakukan aksi di latar belakang. Bagian dari codelab ini akan menjawab beberapa pertanyaan umum tentang Background Service dalam pengembangan aplikasi Android sebagai berikut."
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailEllipse" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
